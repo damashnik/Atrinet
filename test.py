@@ -14,7 +14,7 @@ def grep(filename, needle):
 
 def main(root_dir, needle):
     # Looking for config_specs, grep lines with load, splitting by \ and put the result to dictionary VOBS
-    for filename in glob.iglob(root_dir + '**/config_spec', recursive=True):
+    for filename in glob.iglob(root_dir + '**/**/config_spec', recursive=True):
         matches = grep(filename, needle)
         print(filename)
 
